@@ -30,15 +30,14 @@ body:
     id: sanity_check
     attributes:
       label: Sanity check
-      description: |
-        To avoid duplicating existing efforts, I have...
+      description: Let's confirm that this is not a recipe which has previously been discussed / proposed
       options:
         - label: |
-            ... searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) 
+            I have searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) 
             / [closed](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue+is%3Aclosed) issues,
             or [open](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this recipe
           required: true       
-        - label: ... confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
+        - label: I have confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
           required: true
 
 
@@ -53,6 +52,17 @@ body:
       options:
         - label: The app provides its own, trustworthy authentication, or access control is unnecessary. (*I'd be happy exposing it to the internet*)    
         - label: The app needs something in front of it to secure access (_traefik-forward-auth, authelia, etc_)
+
+  - type: checkboxes
+    id: config
+    attributes:
+      label: ⚙️ Config Management
+      description: How is the app configured? Some applications are configured [entirely using environment variables](https://12factor.net), some need static config files mounted into their container, and some are configured using an interactive setup process (_i.e. NextCloud_). 
+      options:
+        - label: The app is configured with environment variables
+        - label: The app is configured with command-line arguments
+        - label: The app is configured with a static config file on the filesystem
+        - label: The app is configured interactively which then persists the config to the filesystem
 
   - type: checkboxes
     id: terms
