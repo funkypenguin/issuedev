@@ -17,15 +17,6 @@ body:
         - label: I've read the [contribution guide](https://geek-cookbook.funkypenguin.co.nz/community/contribute/) and wholeheartedly agree
           required: true
 
-  - type: input
-    id: project_homepage
-    attributes:
-      label: 🏠 Project Homepage
-      description: Provide a link to the project's homepage
-      placeholder: e.g. https://radarr.video/
-    validations:
-      required: true
-
   - type: checkboxes
     id: sanity_check
     attributes:
@@ -36,6 +27,39 @@ body:
           required: true       
         - label: I have confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
           required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please provide a brief description of the proposed recipe
+    validations:
+      required: true
+
+  - type: input
+    id: project_homepage
+    attributes:
+      label: 🏠 Project Homepage
+      description: Provide a link to the project's homepage
+      placeholder: e.g. https://radarr.video/
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        That's it for the obligatory checks 👌
+        
+        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. You'll also be able to toggle the checklist items *after* you create the issue.
+
 
   - type: checkboxes
     id: authentication
@@ -112,11 +136,3 @@ body:
         - label: I plan to submit a PR for this recipe
         - label: I'm happy to provide community support in Discord re the recipe
 
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
