@@ -59,8 +59,9 @@ body:
         That's it for the obligatory checks 👌
         
         The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. You'll also be able to toggle the checklist items *after* you create the issue.
-
-
+        ---
+        # More details
+        
   - type: checkboxes
     id: authentication
     attributes:
