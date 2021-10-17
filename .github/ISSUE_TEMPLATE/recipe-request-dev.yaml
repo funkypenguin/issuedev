@@ -36,10 +36,23 @@ body:
         - label: |
             ... searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) 
             / [closed](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue+is%3Aclosed) issues,
-            or [open]((https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this recipe
+            or [open](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this recipe
           required: true       
         - label: ... confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
           required: true
+
+
+  - type: checkboxes
+    id: authentication
+    attributes:
+      label: Authentication
+      description: |
+        Does the app provide its own authentication (_i.e. NextCloud_), or does it require an authentication frontend (_i.e., Radarr_)?
+
+        How should access to the app be managed? (_pick one if the answer is obvious_)
+      options:
+        - label: The app provides its own, trustworthy authentication, or access control is unnecessary. (*I'd be happy exposing it to the internet*)    
+        - label: The app needs something in front of it to secure access (_traefik-forward-auth, authelia, etc_)
 
   - type: dropdown
     id: authentication
@@ -51,8 +64,8 @@ body:
         How should access to the app be managed?
       multiple: false
       options:
-        - The app provides its own, trustworthy authentication, or access control is unnecessary. (*I'd be happy exposing it to the internet*)
-        - The app needs something in front of it to secure access (_traefik-forward-auth, authelia, etc_)
+        - 
+        - 
 
   - type: checkboxes
     id: terms
