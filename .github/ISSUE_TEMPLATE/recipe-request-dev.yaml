@@ -20,7 +20,7 @@ body:
   - type: input
     id: project_homepage
     attributes:
-      label: Project Homepage
+      label: 🏠 Project Homepage
       description: Provide a link to the project's homepage
       placeholder: e.g. https://radarr.video/
     validations:
@@ -29,22 +29,18 @@ body:
   - type: checkboxes
     id: sanity_check
     attributes:
-      label: Sanity check
+      label: 🤪 Sanity check
       description: Let's confirm that this is not a recipe which has previously been discussed / proposed
       options:
-        - label: |
-            I have searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) 
-            / [closed](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue+is%3Aclosed) issues,
-            or [open](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this recipe
+        - label: I have searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) / [closed](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue+is%3Aclosed) issues, or [open](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this recipe
           required: true       
         - label: I have confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
           required: true
 
-
   - type: checkboxes
     id: authentication
     attributes:
-      label: Authentication
+      label: 🔐 Authentication
       description: |
         Does the app provide its own authentication (_i.e. NextCloud_), or does it require an authentication frontend (_i.e., Radarr_)?
 
@@ -56,13 +52,65 @@ body:
   - type: checkboxes
     id: config
     attributes:
-      label: ⚙️ Config Management
+      label: 💼 Config Management
       description: How is the app configured? Some applications are configured [entirely using environment variables](https://12factor.net), some need static config files mounted into their container, and some are configured using an interactive setup process (_i.e. NextCloud_). 
       options:
         - label: The app is configured with environment variables
         - label: The app is configured with command-line arguments
         - label: The app is configured with a static config file on the filesystem
         - label: The app is configured interactively which then persists the config to the filesystem
+
+  - type: checkboxes
+    id: connectivity
+    attributes:
+      label: 💼 Connnectivity
+      description: What sort of network connectivity does the app need?
+      options:
+        - label: The app requires no network connectivity
+        - label: The app requires inbound web access HTTP/S access
+        - label: The app requires inbound arbitrary TCP/UDP access
+        - label: The app requires connectivity to other apps in its own stack (_i.e., a database_)
+
+  - type: checkboxes
+    id: persistence
+    attributes:
+      label: 💾 Data persistence
+      description: What sort of persisted data does the app need?
+      options:
+        - label: The app needs no persisted data
+        - label: The app needs access to its own persistent data (_i.e. logs, database directory, etc_)
+        - label: The app needs access to outside data (_i.e. a media player_)
+
+  - type: checkboxes
+    id: backup
+    attributes:
+      label: 🪂 Backup
+      description: How is backup of the app's data to be handled?
+      options:
+        - label: The app does not require backup
+        - label: The app can be backed up with a simple filesystem data copy
+        - label: The app requires an extra process to create backups for a file-based copy (_i.e., a mysql database dump_)
+
+  - type: checkboxes
+    id: orchestration
+    attributes:
+      label: 🤹‍♀️ Orchestration Platform
+      description: Which platform(s) are you interested in a recipe supporting?
+      options:
+        - label: I'm interested deploying the app into Docker Swarm using manual edeiting and classic `docker stack deploy`
+        - label: I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
+        - label: I'm interested deploying the app into Kubernetes using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s helm charts
+
+  - type: checkboxes
+    id: engagement
+    attributes:
+      label: 💍 Engagement
+      description: To get this recipe cooked, I'm willing to...
+      options:
+        - label: I plan to test the recipe after publication and provide feedback
+          required: true
+        - label: I plan to submit a PR for this recipe
+        - label: I'm happy to provide community support in Discord re the recipe
 
   - type: checkboxes
     id: terms
