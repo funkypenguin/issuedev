@@ -10,14 +10,6 @@ body:
         Greetings, fellow geek! Thanks for taking the time to request this recipe!
 
   - type: checkboxes
-    attributes:
-      label: Contribution guidelines
-      description: Please read the contribution guidelines before proceeding.
-      options:
-        - label: I've read the [contribution guide](https://geek-cookbook.funkypenguin.co.nz/community/contribute/) and wholeheartedly agree
-          required: true
-
-  - type: checkboxes
     id: sanity_check
     attributes:
       label: 🤪 Sanity check
@@ -68,7 +60,8 @@ body:
         
         ---
 
-        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. You'll also be able to toggle the checklist items *after* you create the issue.
+        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. 
+        If your're not sure, that's ok, you'll also be able to toggle the checklist items *after* you create the issue.
 
   - type: checkboxes
     id: authentication
@@ -141,7 +134,6 @@ body:
       description: To get this recipe cooked, I'm willing to...
       options:
         - label: I plan to test the recipe after publication and provide feedback
-          required: true
         - label: I plan to submit a PR for this recipe
         - label: I'm happy to provide community support in Discord re the recipe
 
