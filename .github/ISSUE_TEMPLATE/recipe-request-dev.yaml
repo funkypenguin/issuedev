@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Greetings, fellow geek! Thanks for taking the time to request this recipe!
+        Greetings, fellow geek! :wave: Thanks for taking the time to request this recipe!
 
   - type: checkboxes
     id: sanity_check
@@ -44,6 +44,27 @@ body:
       description: If you've joined our [Discord server](http://chat.funkypenguin.co.nz), enter your username here so that we can collaborate effectively
       placeholder: BobTheBuilder#4567
 
+
+  - type: checkboxes
+    id: orchestration
+    attributes:
+      label: 🤹‍♀️ Orchestration Platform
+      description: Which platform(s) are you interested in a recipe supporting?
+      options:
+        - label: I'm interested deploying the app into Docker Swarm using manual editing and classic `docker stack deploy`
+        - label: I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
+        - label: I'm interested deploying the app into Kubernetes using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s helm charts
+
+  - type: checkboxes
+    id: engagement
+    attributes:
+      label: 💍 Engagement
+      description: To get this recipe cooked, I'm willing to...
+      options:
+        - label: I plan to test the recipe after publication and provide feedback
+        - label: I plan to submit a PR for this recipe
+        - label: I'm happy to provide community support in Discord re the recipe
+
   - type: checkboxes
     id: terms
     attributes:
@@ -60,11 +81,13 @@ body:
         
         ---
 
-        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. 
+        The questions which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. 
         If your're not sure, that's ok, you'll also be able to toggle the checklist items *after* you create the issue.
 
-  - type: checkboxes
+  - type: dropdown
     id: authentication
+    validations:
+      required: true    
     attributes:
       label: 🔐 Authentication
       description: |
@@ -72,71 +95,64 @@ body:
 
         How should access to the app be managed? (_pick one if the answer is obvious_)
       options:
-        - label: The app provides its own, trustworthy authentication, or access control is unnecessary. (*I'd be happy exposing it to the internet*)    
-        - label: The app needs something in front of it to secure access (_traefik-forward-auth, authelia, etc_)
+        - The app provides its own, trustworthy authentication, or access control is unnecessary. I'd be happy exposing it to the internet
+        - The app needs something in front of it to secure access (traefik-forward-auth, authelia, etc)
+        - I don't know
 
-  - type: checkboxes
+  - type: dropdown
+    validations:
+      required: true  
     id: config
     attributes:
       label: 💼 Config Management
       description: How is the app configured? Some applications are configured [entirely using environment variables](https://12factor.net), some need static config files mounted into their container, and some are configured using an interactive setup process (_i.e. NextCloud_). 
+      multiple: true
       options:
-        - label: The app is configured with environment variables
-        - label: The app is configured with command-line arguments
-        - label: The app is configured with a static config file on the filesystem
-        - label: The app is configured interactively which then persists the config to the filesystem
+        - The app is configured with environment variables
+        - The app is configured with command-line arguments
+        - The app is configured with a static config file on the filesystem
+        - The app is configured interactively which then persists the config to the filesystem
+        - I don't know
 
-  - type: checkboxes
+  - type: dropdown
     id: connectivity
+    validations:
+      required: true
     attributes:
       label: 💼 Connnectivity
       description: What sort of network connectivity does the app need?
+      multiple: true
       options:
-        - label: The app requires no network connectivity
-        - label: The app requires inbound web access HTTP/S access
-        - label: The app requires inbound arbitrary TCP/UDP access
-        - label: The app requires connectivity to other apps in its own stack (_i.e., a database_)
+        - The app requires no network connectivity
+        - The app requires inbound web access HTTP/S access
+        - The app requires inbound arbitrary TCP/UDP access
+        - The app requires connectivity to other apps in its own stack (_i.e., a database_)
+        - I don't know        
 
-  - type: checkboxes
+  - type: dropdown
     id: persistence
+    validations:
+      required: true    
     attributes:
       label: 💾 Data persistence
       description: What sort of persisted data does the app need?
+      multiple: true
       options:
-        - label: The app needs no persisted data
-        - label: The app needs access to its own persistent data (_i.e. logs, database directory, etc_)
-        - label: The app needs access to outside data (_i.e. a media player_)
+        - The app needs no persisted data
+        - The app needs access to its own persistent data (_i.e. logs, database directory, etc_)
+        - The app needs access to outside data (_i.e. a media player_)
+        - I don't know        
 
-  - type: checkboxes
+  - type: dropdown
     id: backup
+    validations:
+      required: true    
     attributes:
       label: 🪂 Backup
       description: How is backup of the app's data to be handled?
       options:
-        - label: The app does not require backup
-        - label: The app can be backed up with a simple filesystem data copy
-        - label: The app requires an extra process to create backups for a file-based copy (_i.e., a mysql database dump_)
-
-  - type: dropdown
-    id: orchestration
-    validations:
-      required: true
-    attributes:
-      label: 🤹‍♀️ Orchestration Platform
-      description: Which platform(s) are you interested in a recipe supporting?
-      multiple: true
-      options:
-        - I'm interested deploying the app into Docker Swarm using manual edeiting and classic `docker stack deploy`
-        - I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
-        - I'm interested deploying the app into Kubernetes using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s helm charts
-
-  - type: checkboxes
-    id: engagement
-    attributes:
-      label: 💍 Engagement
-      description: To get this recipe cooked, I'm willing to...
-      options:
-        - label: I plan to test the recipe after publication and provide feedback
-        - label: I plan to submit a PR for this recipe
-        - label: I'm happy to provide community support in Discord re the recipe
+        - The app does not require backup
+        - The app can be backed up with a simple filesystem data copy
+        - The app requires an extra process to create backups for a file-based copy (i.e., a mysql database dump)
+        - I don't know        
 
