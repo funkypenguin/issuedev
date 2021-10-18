@@ -82,7 +82,7 @@ body:
         ---
 
         The questions which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. 
-        If your're not sure, that's ok, you'll also be able to toggle the checklist items *after* you create the issue.
+        If your're not sure, that's ok, just choose "I don't know" from the dropdown selection.
 
   - type: dropdown
     id: authentication
@@ -126,7 +126,7 @@ body:
         - The app requires no network connectivity
         - The app requires inbound web access HTTP/S access
         - The app requires inbound arbitrary TCP/UDP access
-        - The app requires connectivity to other apps in its own stack (_i.e., a database_)
+        - The app requires connectivity to other apps in its own stack (i.e., a database)
         - I don't know        
 
   - type: dropdown
@@ -139,9 +139,9 @@ body:
       multiple: true
       options:
         - The app needs no persisted data
-        - The app needs access to its own persistent data (_i.e. logs, database directory, etc_)
-        - The app needs access to outside data (_i.e. a media player_)
-        - I don't know        
+        - The app needs access to its own persistent data (i.e. logs, database directory, etc)
+        - The app needs access to outside data (i.e. a media player)
+        - ¯\_(ツ)_/¯   
 
   - type: dropdown
     id: backup
