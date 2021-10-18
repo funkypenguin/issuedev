@@ -7,7 +7,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Greetings, fellow geek! :wave: Thanks for taking the time to request this recipe!
+        Greetings, fellow geek! :wave: 
+        
+        Thanks for taking the time to request this recipe! This issue form helps to capture the 
+        request in a standardized way, and to pre-gather as much information as possible, to expidite
+        the cooking process!
 
   - type: checkboxes
     id: sanity_check
@@ -62,8 +66,8 @@ body:
       description: To get this recipe cooked, I'm willing to...
       options:
         - label: I plan to test the recipe after publication and provide feedback
-        - label: I plan to submit a PR for this recipe
         - label: I'm happy to provide community support in Discord re the recipe
+        - label: I plan to submit a PR for this recipe myself 🏆
 
   - type: checkboxes
     id: terms
@@ -71,18 +75,18 @@ body:
       label: Code of Conduct
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I agree to follow this Geek Cookbook's Code of Conduct
           required: true
 
   - type: markdown
     attributes:
       value: |
-        That's it for the obligatory checks 👌. You can skip to the bottom and create the issue, or continue below to provide further details.
+        That's it for the obligatory checkboxes 👌
         
         ---
 
-        The questions which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. 
-        If your're not sure, that's ok, just choose "I don't know" from the dropdown selection.
+        The questions which follow are intended to help to frame the recipe correctly. 
+        If your're not sure, that's ok, just choose `¯\_(ツ)_/¯` from the dropdown selection.
 
   - type: dropdown
     id: authentication
@@ -97,7 +101,7 @@ body:
       options:
         - The app provides its own, trustworthy authentication, or access control is unnecessary. I'd be happy exposing it to the internet
         - The app needs something in front of it to secure access (traefik-forward-auth, authelia, etc)
-        - I don't know
+        - ¯\_(ツ)_/¯ 
 
   - type: dropdown
     validations:
@@ -112,7 +116,7 @@ body:
         - The app is configured with command-line arguments
         - The app is configured with a static config file on the filesystem
         - The app is configured interactively which then persists the config to the filesystem
-        - I don't know
+        - ¯\_(ツ)_/¯ 
 
   - type: dropdown
     id: connectivity
@@ -127,7 +131,7 @@ body:
         - The app requires inbound web access HTTP/S access
         - The app requires inbound arbitrary TCP/UDP access
         - The app requires connectivity to other apps in its own stack (i.e., a database)
-        - I don't know        
+        - ¯\_(ツ)_/¯       
 
   - type: dropdown
     id: persistence
@@ -154,5 +158,5 @@ body:
         - The app does not require backup
         - The app can be backed up with a simple filesystem data copy
         - The app requires an extra process to create backups for a file-based copy (i.e., a mysql database dump)
-        - I don't know        
+        - ¯\_(ツ)_/¯       
 
