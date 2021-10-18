@@ -119,12 +119,12 @@ body:
 
   - type: dropdown
     id: orchestration
+    validations:
+      required: true
     attributes:
       label: 🤹‍♀️ Orchestration Platform
       description: Which platform(s) are you interested in a recipe supporting?
       multiple: true
-      validations:
-        required: true
       options:
         - I'm interested deploying the app into Docker Swarm using manual edeiting and classic `docker stack deploy`
         - I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
