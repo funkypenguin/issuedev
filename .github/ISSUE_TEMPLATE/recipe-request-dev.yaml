@@ -122,10 +122,13 @@ body:
     attributes:
       label: 🤹‍♀️ Orchestration Platform
       description: Which platform(s) are you interested in a recipe supporting?
+      multiple: true
+      validations:
+        required: true
       options:
-        - label: I'm interested deploying the app into Docker Swarm using manual edeiting and classic `docker stack deploy`
-        - label: I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
-        - label: I'm interested deploying the app into Kubernetes using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s helm charts
+        - I'm interested deploying the app into Docker Swarm using manual edeiting and classic `docker stack deploy`
+        - I'm interested deploying the app into Docker Swarm using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s automated ansible playbooks
+        - I'm interested deploying the app into Kubernetes using [premix](https://geek-cookbook.funkypenguin.co.nz/premix/)'s helm charts
 
   - type: checkboxes
     id: engagement
