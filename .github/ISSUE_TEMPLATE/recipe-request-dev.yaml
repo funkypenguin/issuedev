@@ -27,6 +27,7 @@ body:
           required: true       
         - label: I have confirmed that the app is actively supported by its developers (_i.e., not deprecated or abandoned_)
           required: true
+          
 
   - type: textarea
     attributes:
@@ -44,6 +45,13 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: discord_id
+    attributes:
+      label: Your Discord username
+      description: If you've joined our [Discord server](http://chat.funkypenguin.co.nz), enter your username here so that we can collaborate effectively
+      placeholder: BobTheBuilder#4567
+
   - type: checkboxes
     id: terms
     attributes:
@@ -58,12 +66,9 @@ body:
       value: |
         That's it for the obligatory checks 👌. You can skip to the bottom and create the issue, or continue below to provide further details.
         
-        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. You'll also be able to toggle the checklist items *after* you create the issue.
-
         ---
-        # More details
 
-        text under heading
+        The checklists which follow are intended to help to frame the recipe correctly. Provide answers if you have them, else leave them blank. You'll also be able to toggle the checklist items *after* you create the issue.
 
   - type: checkboxes
     id: authentication
