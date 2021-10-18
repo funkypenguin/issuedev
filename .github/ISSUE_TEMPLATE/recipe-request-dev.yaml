@@ -117,7 +117,7 @@ body:
         - label: The app can be backed up with a simple filesystem data copy
         - label: The app requires an extra process to create backups for a file-based copy (_i.e., a mysql database dump_)
 
-  - type: checkboxes
+  - type: dropdown
     id: orchestration
     attributes:
       label: 🤹‍♀️ Orchestration Platform
