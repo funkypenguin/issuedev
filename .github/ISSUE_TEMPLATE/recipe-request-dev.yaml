@@ -97,7 +97,7 @@ body:
       description: |
         Does the app provide its own authentication (_i.e. NextCloud_), or does it require an authentication frontend (_i.e., Radarr_)?
 
-        How should access to the app be managed? (_pick one if the answer is obvious_)
+        How should access to the app be managed?
       options:
         - The app provides its own, trustworthy authentication, or access control is unnecessary. I'd be happy exposing it to the internet
         - The app needs something in front of it to secure access (traefik-forward-auth, authelia, etc)
