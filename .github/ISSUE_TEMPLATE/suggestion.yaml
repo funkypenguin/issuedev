@@ -6,6 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## Greetings!
+        
         Greetings, fellow geek! :wave: 
         
         Thanks for taking the time to pass on a suggestion for improvement! This issue form helps to capture your 
