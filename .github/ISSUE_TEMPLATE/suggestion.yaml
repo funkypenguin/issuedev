@@ -22,7 +22,7 @@ body:
           
   - type: textarea
     attributes:
-      label: What's not right?
+      label: 🤕 What's not right?
       description: What's the challenge, or the area for improvement?
       placeholder: A clear and concise description of what the problem/challenge is. Ex. I have an issue when [...]
     validations:
@@ -30,7 +30,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Here's my idea!
+      label: 🤯 Here's my idea!
       description: Describe the solution you'd suggest
       placeholder: A clear and concise description of what you want to happen. Add any considered drawbacks.
     validations:
@@ -38,7 +38,7 @@ body:
 
   - type: textarea
     attributes:
-      label: On the other hand..
+      label: 🤔 On the other hand..
       description: Describe alternatives you've considered
       placeholder: A clear and concise description of any alternative solutions or features you've considered.
     validations:
@@ -46,7 +46,7 @@ body:
 
   - type: textarea
     attributes:
-      label: But will it fly?
+      label: 🤩 But will it fly?
       description: Teachability, Documentation, Adoption, Migration Strategy
       placeholder: If you can, explain how users will be able to use this and possibly write out a version the docs. Maybe a screenshot or design?
     validations:
@@ -55,7 +55,7 @@ body:
   - type: input
     id: discord_id
     attributes:
-      label: Your Discord username
+      label: 💬 Your Discord username
       description: If you've joined our [Discord server](http://chat.funkypenguin.co.nz), enter your username here so that we can collaborate effectively
       placeholder: BobTheBuilder#4567
 
@@ -72,7 +72,7 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
+      label: ✅ Code of Conduct
       description: By submitting this issue, I agree to follow our community's [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
       options:
         - label: I agree to follow this Geek Cookbook's Code of Conduct
