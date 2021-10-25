@@ -1,5 +1,5 @@
-name: "💡 Feature Request"
-description: I have a suggestion for improvement 🏋️‍♀️
+name: "Suggestion 🧐"
+description: I have a suggestion for an improvement 🧐
 title: "[suggestion] "
 
 body:
@@ -8,9 +8,8 @@ body:
       value: |
         Greetings, fellow geek! :wave: 
         
-        Thanks for taking the time to request this recipe! This issue form helps to capture the 
-        request in a standardized way, and to pre-gather as much information as possible, to expidite
-        the cooking process!
+        Thanks for taking the time to pass on a suggestion for improvement! This issue form helps to capture your 
+        suggestion in a standardized way, all the better to implement it!
 
   - type: checkboxes
     id: sanity_check
@@ -23,23 +22,23 @@ body:
           
   - type: textarea
     attributes:
-      label: Problem
-      description: Is your feature request related to a problem?
-      placeholder: A clear and concise description of what the problem is. Ex. I have an issue when [...]
+      label: What's not right?
+      description: What's the challenge, or the area for improvement?
+      placeholder: A clear and concise description of what the problem/challenge is. Ex. I have an issue when [...]
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Solution
-      description: Describe the solution you'd like
+      label: Here's my idea!
+      description: Describe the solution you'd suggest
       placeholder: A clear and concise description of what you want to happen. Add any considered drawbacks.
     validations:
       required: true      
 
   - type: textarea
     attributes:
-      label: Alternatives
+      label: On the other hand..
       description: Describe alternatives you've considered
       placeholder: A clear and concise description of any alternative solutions or features you've considered.
     validations:
@@ -47,7 +46,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Adoption
+      label: But will it fly?
       description: Teachability, Documentation, Adoption, Migration Strategy
       placeholder: If you can, explain how users will be able to use this and possibly write out a version the docs. Maybe a screenshot or design?
     validations:
@@ -64,17 +63,17 @@ body:
     id: engagement
     attributes:
       label: 💍 Engagement
-      description: To get this recipe cooked, I'm willing to...
+      description: To see this suggestion implemented, I'm willing to...
       options:
-        - label: I plan to test the recipe after publication and provide feedback
-        - label: I'm happy to provide community support in Discord re the recipe
-        - label: I plan to submit a PR for this recipe myself 🏆
+        - label: Test the changes after a preview deploy and provide feedback
+        - label: Solicit community input in Discord
+        - label: Submit a PR for a first-cut myself 🏆
 
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
+      description: By submitting this issue, I agree to follow our community's [Code of Conduct](https://geek-cookbook.funkypenguin.co.nz/community/code-of-conduct/)
       options:
         - label: I agree to follow this Geek Cookbook's Code of Conduct
           required: true
