@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Greetings!
-        
-        Greetings, fellow geek! :wave: 
+        ## :wave: Greetings!
+
+        Greetings, fellow geek! 
         
         Thanks for taking the time to pass on a suggestion for improvement! This issue form helps to capture your 
         suggestion in a standardized way, all the better to implement it!
