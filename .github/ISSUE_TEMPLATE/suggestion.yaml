@@ -1,4 +1,4 @@
-name: "Suggestion 🧐"
+name: "💡 Suggestion"
 description: I have a suggestion for an improvement 🧐
 title: "[suggestion] "
 
@@ -17,7 +17,7 @@ body:
     id: sanity_check
     attributes:
       label: 🤪 Sanity check
-      description: Let's confirm that this is not a suggestion which has previously been discussed / proposed
+      description: Let's first confirm that this is not a suggestion which has previously been discussed / proposed
       options:
         - label: I have searched and confirmed no existing [open](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue) / [closed](https://github.com/funkypenguin/geek-cookbook/issues?q=is%3Aissue+is%3Aclosed) issues, or [open](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr) / [closed](https://github.com/funkypenguin/geek-cookbook/pulls?q=is%3Apr+is%3Aclosed) PRs exist for this suggestion
           required: true       
@@ -68,7 +68,7 @@ body:
       description: To see this suggestion implemented, I'm willing to...
       options:
         - label: Test the changes after a preview deploy and provide feedback
-        - label: Solicit community input in Discord
+        - label: Solicit community input in [Discord](http://chat.funkypenguin.co.nz)
         - label: Submit a PR for a first-cut myself 🏆
 
   - type: checkboxes
